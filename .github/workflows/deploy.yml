@@ -16,4 +16,4 @@ jobs:
           username: ${{ secrets.DEPLOY_USER }}
           password: ${{ secrets.DEPLOY_PASSWORD }}
           key: ${{ secrets.DEPLOY_SECRET }}
-          script: mkdir /home/teet
+          script: sh /home/deploy.sh
