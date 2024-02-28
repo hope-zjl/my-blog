@@ -18,10 +18,10 @@ jobs:
       with:
         ruby-version:  ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: Build
-      uses: actions/jekyll-build-pages@v1
+        run: |
+          cd my-blog
+          jekyll install
+          jekyll build
 
     - name: copy file via ssh password
       uses: appleboy/scp-action@v0.1.7
