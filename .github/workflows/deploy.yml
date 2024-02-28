@@ -30,7 +30,7 @@ jobs:
         username: ${{ secrets.DEPLOY_USER }}
         password: ${{ secrets.DEPLOY_PASSWORD }}
         key: ${{ secrets.DEPLOY_SECRET }}
-        source: "./*"
+        source: "deploy.tar"
         target: "/var/www"
 
     - name: executing remote ssh commands to develop
