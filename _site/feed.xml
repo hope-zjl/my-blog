@@ -4,7 +4,7 @@
   <id>/</id>
   <title>雪球</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-02-28T09:17:28+08:00</updated>
+  <updated>2024-02-28T09:20:19+08:00</updated>
   <author>
     <name>雪球</name>
     <uri>/</uri>
@@ -24,7 +24,7 @@
     <link href="/posts/testContent/" rel="alternate" type="text/html" title="测试标题" />
     <published>2024-02-22T11:38:40+08:00</published>
   
-    <updated>2024-02-28T00:03:13+08:00</updated>
+    <updated>2024-02-28T09:18:02+08:00</updated>
   
     <id>/posts/testContent/</id>
     <content src="/posts/testContent/" />
@@ -56,7 +56,7 @@
 
 
 
-  添加测试2
+  添加测试3
 
 
     </summary>
