@@ -28,7 +28,7 @@ jobs:
         username: ${{ secrets.DEPLOY_USER }}
         password: ${{ secrets.DEPLOY_PASSWORD }}
         key: ${{ secrets.DEPLOY_SECRET }}
-        source: "/home/runner/work/my-blog/my-blog/_site/*"
+        source: "./_site/*"
         target: "/var/www"
 
     - name: executing remote ssh commands to develop
