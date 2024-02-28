@@ -30,8 +30,8 @@ jobs:
         user: ${{ secrets.DEPLOY_USER }}
         pass: ${{ secrets.DEPLOY_PASSWORD }}
         key: ${{ secrets.DEPLOY_SECRET }}
-        source: "./*"
-        target: "/var/www"
+        local: "./*"
+        remote: "/var/www"
 
     - name: executing remote ssh commands to develop
       uses: appleboy/ssh-action@master
