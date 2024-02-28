@@ -12,3 +12,4 @@ mermaid: true
 > 使用Jekyll构建
 
 - 添加测试3
+- 测试新的功能
