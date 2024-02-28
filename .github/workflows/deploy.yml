@@ -20,12 +20,12 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run tests
       run: bundle exec rake
-    steps:
-      - name: executing remote ssh commands to develop
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.DEPLOY_HOST }}
-          username: ${{ secrets.DEPLOY_USER }}
-          password: ${{ secrets.DEPLOY_PASSWORD }}
-          key: ${{ secrets.DEPLOY_SECRET }}
-          script: sh /home/deploy.sh
+
+    - name: executing remote ssh commands to develop
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.DEPLOY_HOST }}
+        username: ${{ secrets.DEPLOY_USER }}
+        password: ${{ secrets.DEPLOY_PASSWORD }}
+        key: ${{ secrets.DEPLOY_SECRET }}
+        script: sh /home/deploy.sh
