@@ -12,13 +12,14 @@ jobs:
       matrix:
         ruby-version: ['3.2.2']
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
-      with:
-        ruby-version: ${{ matrix.ruby-version }}
-        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-        run: cd /home/runner/work/my-blog/my-blog && Jekyll build
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup Pages
+      uses: actions/configure-pages@v3
+    - name: Build
+      uses: actions/jekyll-build-pages@v1
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
 
     - name: copy file via ssh password
       uses: appleboy/scp-action@v0.1.7
