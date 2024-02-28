@@ -24,13 +24,13 @@ jobs:
           jekyll build
 
     - name: copy file via ssh password
-      uses: appleboy/scp-action@v0.1.7
+      uses: cross-the-world/scp-pipeline@master
       with:
         host: ${{ secrets.DEPLOY_HOST }}
-        username: ${{ secrets.DEPLOY_USER }}
-        password: ${{ secrets.DEPLOY_PASSWORD }}
-        key: ${{ secrets.DEPLOY_SECRET }}
-        source: "./server/*"
+        user: ${{ secrets.DEPLOY_USER }}
+        pass: ${{ secrets.DEPLOY_PASSWORD }}
+
+        source: "./*"
         target: "/var/www"
 
     - name: executing remote ssh commands to develop
