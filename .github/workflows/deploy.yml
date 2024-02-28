@@ -30,7 +30,7 @@ jobs:
         user: ${{ secrets.DEPLOY_USER }}
         pass: ${{ secrets.DEPLOY_PASSWORD }}
         key: ${{ secrets.DEPLOY_SECRET }}
-        local: "./*"
+        local: "./_site/*"
         remote: "/var/www"
 
     - name: executing remote ssh commands to develop
