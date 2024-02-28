@@ -21,14 +21,14 @@ jobs:
         run: jekyll build
 
     - name: copy file via ssh password
-      uses: appleboy/scp-action@v0.1.7
+      uses: nogsantos/scp-deploy@master
       with:
         host: ${{ secrets.DEPLOY_HOST }}
         username: ${{ secrets.DEPLOY_USER }}
         password: ${{ secrets.DEPLOY_PASSWORD }}
         key: ${{ secrets.DEPLOY_SECRET }}
-        source: "./*"
-        target: "/var/www"
+        src: ./_site/*
+        remote: "/var/www"
 
     - name: executing remote ssh commands to develop
       uses: appleboy/ssh-action@master
