@@ -21,7 +21,6 @@ jobs:
 
     - name: Build
       run: |
-        cd my-blog
         jekyll install
         jekyll build
 
