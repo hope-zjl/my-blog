@@ -19,6 +19,7 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
         run: "jekyll build"
+
     - name: copy file via ssh password
       uses: appleboy/scp-action@v0.1.7
       with:
@@ -26,7 +27,7 @@ jobs:
         username: ${{ secrets.DEPLOY_USER }}
         password: ${{ secrets.DEPLOY_PASSWORD }}
         key: ${{ secrets.DEPLOY_SECRET }}
-        source: "./_site/*"
+        source: "_site/*"
         target: "/var/www"
 
     - name: executing remote ssh commands to develop
