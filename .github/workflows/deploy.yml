@@ -24,8 +24,8 @@ jobs:
       uses: nogsantos/scp-deploy@master
       with:
         host: ${{ secrets.DEPLOY_HOST }}
-        username: ${{ secrets.DEPLOY_USER }}
-        password: ${{ secrets.DEPLOY_PASSWORD }}
+        user: ${{ secrets.DEPLOY_USER }}
+        # password:
         key: ${{ secrets.DEPLOY_SECRET }}
         src: ./_site/*
         remote: "/var/www"
