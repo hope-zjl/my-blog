@@ -1,15 +1,11 @@
 ---
 title: 测试标题
 date: 2024-02-22 11:38:40 +0800
-categories: [好文, 鸡汤]
-tags: [TAG]     # TAG names should always be lowercase
+categories: [开始, 第一篇]
+tags: [第一篇]     # TAG names should always be lowercase
 mermaid: true
 ---
 
-## hello world
+> 初始化
 
-> 初始化  
-> 使用Jekyll构建
-
-- 添加测试32
-- 测试新的功能v3
+- 今天是2024年2月22日，创建了我的博客。
