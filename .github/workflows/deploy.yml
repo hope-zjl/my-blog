@@ -21,7 +21,7 @@ jobs:
 
     - name: Build
       run: |
-        bundle exec jekyll serve build
+        bundle exec jekyll build
 
     - name: copy file via ssh password
       uses: cross-the-world/scp-pipeline@master
