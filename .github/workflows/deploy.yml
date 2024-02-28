@@ -18,7 +18,7 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-        run: pwd
+        run: cd /home/runner/work/my-blog/my-blog && Jekyll build
 
     - name: copy file via ssh password
       uses: appleboy/scp-action@v0.1.7
