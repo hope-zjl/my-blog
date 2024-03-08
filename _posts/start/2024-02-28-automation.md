@@ -2,7 +2,7 @@
 title: 博客自动化部署(Git + GitHub Action + VPS)
 date: 2024-02-28 22:10:02 +0800
 categories: [开始, 自动化部署]
-tags: [Git, GitHub Actions, VPS, SSH]     # TAG names should always be lowercase
+tags: [Git, GitHub Actions, VPS, SSH, Coding]     # TAG names should always be lowercase
 mermaid: true
 math: true
 render_with_liquid: false
