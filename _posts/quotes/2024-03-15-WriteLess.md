@@ -1,6 +1,6 @@
 ---
 title: 随想录，简单，少写
-date: 2024-03-04 10:47:40 +0800
+date: 2024-03-15 14:51:25 +0800
 categories: [随想, 精简]
 tags: [精简]     # TAG names should always be lowercase
 mermaid: true
