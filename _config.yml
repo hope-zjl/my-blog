@@ -19,17 +19,18 @@ title: 雪球 # the main title
 tagline: 短期悲观主义者，长期乐观主义者 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  雪球的博客
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+url: "https://xue-qiu.top"
 
 github:
   username: hope-zjl # change to your github username
 
 twitter:
   username: nPqIMxlOjSLowcL # change to your twitter username
+  card: summary
 
 social:
   # Change to your full name.
@@ -44,7 +45,7 @@ social:
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-google_site_verification: # fill in to your verification string
+google_site_verification: FFGGnBAl8H-b-N1x8WWfMsXwFPz2X0BjO9_bXfvIiRU # fill in to your verification string
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
@@ -205,3 +206,4 @@ jekyll-archives:
 # 添加emoji （https://www.webfx.com/tools/emoji-cheat-sheet/） （https://emojipedia.org/）
 plugins:
   - jemoji
+  - jekyll-seo-tag
