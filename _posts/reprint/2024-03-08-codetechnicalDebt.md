@@ -4,6 +4,7 @@ date: 2024-03-08 09:20:28 +0800
 categories: [转载, code]
 tags: [转载, 阮一峰, 好文, Coding, 技术债]     # TAG names should always be lowercase
 mermaid: true
+comments: true
 ---
 
 下面这段话引自[阮一峰的网络日志](https://www.ruanyifeng.com/blog/2024/03/weekly-issue-292.html){:target="_blank"}最近在网站上发表的一篇文章，题为 "所有代码都是技术债"：

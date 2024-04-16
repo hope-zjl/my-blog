@@ -4,6 +4,7 @@ date: 2024-03-31 00:05:42 +0800
 categories: [转载, code]
 tags: [技术债, InfoQ]     # TAG names should always be lowercase
 mermaid: true
+comments: true
 ---
 
 > - 如果你能在五分钟内修好它，那就应该修理。

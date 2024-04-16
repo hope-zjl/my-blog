@@ -6,6 +6,7 @@ tags: [Git, GitHub Actions, VPS, SSH, Coding]     # TAG names should always be l
 mermaid: true
 math: true
 render_with_liquid: false
+comments: true
 ---
 
 > 项目自动化

@@ -4,6 +4,7 @@ date: 2024-03-09 10:11:46 +0800
 categories: [开始, 博客说明]
 tags: []     # TAG names should always be lowercase
 pin: true
+comments: true
 ---
 
 - **非常喜欢 RSS 的一件事是，它赋予我不能触及的无控制权——我并不清楚谁在订阅读我的内容、他们读了些什么以及何时订阅的。**
