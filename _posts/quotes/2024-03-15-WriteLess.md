@@ -8,7 +8,7 @@ comments: true
 ---
 
 > If we wish to count lines of code, we should not regard them as “lines produced” but as “lines spent”
-> 
+>
 > __*[---Dijkstra](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD10xx/EWD1036.html){:target="_blank"}*__
 >
 > __如果我们想要统计代码行数，我们不应该将其视为'产出的代码行数'，而应该将其视为'花费的代码行数'。__
