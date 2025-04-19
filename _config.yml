@@ -16,7 +16,7 @@ timezone: Asia/Shanghai
 
 title: 雪球 # the main title
 
-tagline: 短期悲观主义者，长期乐观主义者 # it will display as the sub-title
+tagline: 短期悲观主义者<br>长期乐观主义者 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   雪球的博客
