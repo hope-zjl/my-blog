@@ -24,7 +24,7 @@ jobs:
         bundle exec jekyll build
 
     - name: copy file via ssh password
-      uses: cross-the-world/scp-pipeline@master
+      uses: appleboy/scp-action@v1
       with:
         host: ${{ secrets.DEPLOY_HOST }}
         user: ${{ secrets.DEPLOY_USER }}
