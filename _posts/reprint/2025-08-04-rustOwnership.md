@@ -1,6 +1,6 @@
 ---
 title: "Rust所有权：别再死记硬背了！把智能指针当“玩具”玩，三巨头(Box, Rc, RefCell)让你秒懂内存管理"
-date: 2024-03-31 00:05:42 +0800
+date: 2025-08-04 18:28:11 +0800
 categories: [转载, rust]
 tags: [所有权, Box, Rc, RefCell]     # TAG names should always be lowercase
 mermaid: true
