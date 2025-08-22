@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒计时</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #countdown {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown">计算中...</div>
+
+    <script>
+        // === 在这里设置您的结束时间 ===
+        // 请修改下面这一行的日期和时间
+        // 格式：'YYYY-MM-DD HH:MM:SS' (24小时制)
+        // 例如：'2025-12-31 23:59:59'
+        const endTime = '2025-10-03 07:30:00';
+
+        // 将结束时间字符串转换为 Date 对象
+        const endDateTime = new Date(endTime);
+
+        function updateCountdown() {
+            // 获取当前时间
+            const now = new Date();
+
+            // 计算时间差（毫秒）
+            const timeDiff = endDateTime - now;
+
+            // 如果倒计时已结束
+            if (timeDiff <= 0) {
+                document.getElementById('countdown').textContent = '0';
+                return;
+            }
+
+            // 将毫秒转换为天数（向下取整）
+            // 1000毫秒 * 60秒 * 60分钟 * 24小时
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+            // 显示天数
+            document.getElementById('countdown').textContent = days;
+        }
+
+        // 页面加载时立即执行一次
+        updateCountdown();
+
+        // 每隔 1 秒（1000毫秒）更新一次
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
