@@ -1,120 +1,404 @@
 <!DOCTYPE html>
-<title>个人简历</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" http-equiv="Content-Type"/>
-<meta name="Content-Type" content="text/html; charset=utf-8"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/casualwriter/casual-markdown/dist/casual-markdown.css">
-<script src="https://cdn.jsdelivr.net/gh/casualwriter/casual-markdown/dist/casual-markdown.js"></script>
-<style>
-  body { line-height:1.5; margin:auto; padding:3px; max-width:1024px; display:none; FONT-FAMILY:ARIAL; }
-  h1  { font-size:200%; padding:16px; border:1px solid lightgrey; BACKGROUND:STEELBLUE; COLOR:WHITE }
-  h2  { border-bottom:1px solid grey; padding:2px; COLOR:STEELBLUE }
-</style>
-<body onload="document.body.innerHTML=md.html(document.body.innerHTML); document.body.style.display='block';">
-<!--======= COPY ABOVE CODE AS HEADER, THEN FOLLOW WITH RESUME CONTENT IN MARKDOWN FORMAT =========-->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>周家乐 - 个人简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 30px 20px;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 30px 40px;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .header .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .contact-info div {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        
+        .content {
+            padding: 35px 40px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #2c3e50;
+            font-weight: 600;
+        }
+        
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .skills-table td {
+            padding: 8px 12px;
+            font-size: 14px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .skills-table td:first-child {
+            width: 100px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .experience-item {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+        
+        .company-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .duration {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .project-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .project-item:last-child {
+            border-bottom: none;
+        }
+        
+        .project-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .project-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .project-content {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+        
+        .project-content ul {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+        
+        .project-content li {
+            margin-bottom: 5px;
+        }
+        
+        .education-item {
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        
+        .university {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .evaluation-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .evaluation-list li {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .evaluation-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #2c3e50;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header, .content {
+                padding: 20px;
+            }
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>周家乐</h1>
+            <div class="subtitle">全栈开发工程师</div>
+            <div class="contact-info">
+                <div>邮箱: z429213642@gmail.com</div>
+                <div>电话: +86 17681330007</div>
+                <div>现居: 北京</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <!-- 技能清单 -->
+            <div class="section">
+                <h2 class="section-title">专业技能</h2>
+                <table class="skills-table">
+                    <tr>
+                        <td>后端开发</td>
+                        <td>Java, Spring Boot, Spring Cloud, MyBatis Plus</td>
+                    </tr>
+                    <tr>
+                        <td>前端开发</td>
+                        <td>JavaScript, Vue3, Element Plus, Quasar</td>
+                    </tr>
+                    <tr>
+                        <td>数据库</td>
+                        <td>MySQL, MongoDB, Redis</td>
+                    </tr>
+                    <tr>
+                        <td>开发工具</td>
+                        <td>Docker, Git, Linux, VS Code, IDEA</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 工作经验 -->
+            <div class="section">
+                <h2 class="section-title">工作经历</h2>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="company-name">中软国际 · 高级软件工程师</span>
+                        <span class="duration">2024年11月 - 至今</span>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="company-name">求臻医学 · 软件工程师</span>
+                        <span class="duration">2021年9月 - 2024年10月（3年）</span>
+                    </div>
+                    <div style="font-size: 13px; color: #666; margin-top: 3px;">负责医疗信息化系统开发，参与报告系统、EDC系统、可视化平台等多个核心项目</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="company-name">正铭伦 · 初级软件工程师</span>
+                        <span class="duration">2021年3月 - 2021年8月（6个月）</span>
+                    </div>
+                    <div style="font-size: 13px; color: #666; margin-top: 3px;">负责任务调度系统与数据传输系统的开发维护工作</div>
+                </div>
+            </div>
+            
+            <!-- 项目经验 -->
+            <div class="section">
+                <h2 class="section-title">项目经验</h2>
+                
+                <div class="project-item">
+                    <div class="project-header">
+                        <span class="project-title">SAFE 数据安全传输系统</span>
+                        <span class="project-role">核心开发</span>
+                    </div>
+                    <div class="project-tech">技术栈: Spring + MySQL</div>
+                    <div class="project-content">
+                        <strong>项目描述:</strong> 内外网数据安全传输系统，负责接收商务部数据报文，进行数据打包、内外网传输、数据校验等操作，确保数据传输的安全性和完整性。
+                    </div>
+                    <div class="project-content">
+                        <strong>核心职责:</strong>
+                        <ul>
+                            <li>开发报文接收模块，处理商务部传输的业务数据</li>
+                            <li>实现数据打包与内外网互传功能，确保数据安全传输</li>
+                            <li>设计数据校验机制，对异常数据进行单独打包并触发重传流程</li>
+                        </ul>
+                    </div>
+                </div>
 
-<!-- <img style="float:right;border-radius:50%;width:70px;padding:6px" src="avatar-man.jpg" /> -->
+                <div class="project-item">
+                    <div class="project-header">
+                        <span class="project-title">TASK 任务调度系统（系统重构与优化）</span>
+                        <span class="project-role">核心开发</span>
+                    </div>
+                    <div class="project-tech">技术栈: Spring + JSP + MySQL</div>
+                    <div class="project-content">
+                        <strong>项目描述:</strong> 企业级任务调度与监控系统，负责管理定时任务的注册、调度、执行监控及日志记录。主要模块包括工作注册、任务监控、任务日志、工作日志、任务注册、数据源配置等。
+                    </div>
+                    <div class="project-content">
+                        <strong>核心职责:</strong>
+                        <ul>
+                            <li>对遗留系统进行全面重构优化，提升系统性能与可维护性</li>
+                            <li>引入应用双活机制，实现高可用架构，提升系统稳定性</li>
+                            <li>完成浏览器兼容性适配（Chrome、Firefox），解决前端渲染问题</li>
+                            <li>优化定时任务调度算法，完善初始化阶段的任务分配逻辑</li>
+                            <li>集成日志记录模块，增强系统监控与问题排查能力</li>
+                        </ul>
+                    </div>
+                </div>
 
-<span style="float:right;padding:6px;COLOR:WHITE">
-  邮箱: z429213642@gmail.com <br> 联系方式: +86 17681330007 <br> 现居: 北京
-</span>
-
-# 个人简历（周家乐）
-
-## 技能清单
-
-* 后端: Java,Spring Boot,Spring Cloud
-* 前端: JavaScript,Vue3,Element Plus,Quasar
-* 工具: Docker,Git,Linux
-* IDE: VS Code,IDEA
-* 数据库: Mysql,MongoDB,Redis
-
-## 工作经验
-
-#### 现任公司(中软国际)
-
-* 2024年11月-至今
-
-#### 第二家公司(求臻医学)
-
-* 2021年9月-2024年10月
-
-#### 第一家公司(正铭伦)
-
-* 2021年3月-8月
-
-## 项目
-
-* 开发环境: 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;idea + Git + Mysql + JDK1.8 + Redis + VS code
-
-* 项目框架: 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;后端的主要技术架构是: SpringBoot + SpringCloud + MyBatis Plus + Maven + MongoDB + Redis + Mysql
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前端端的主要技术架构是: vue3 + quasar + element plus + Echats
-
-
-### TASK工程
-
-* 项目描述：
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目为单体项目,页面使用的JSP,后端使用Spring来写的。<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务模块主要涉及到: 工作注册模块、任务监控模块、日志模块(任务日志和工作日志)、任务注册模块、数据源配置模块。
-
-* 责任描述:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这个项目主要目标是对一个现有的老项目进行全面优化和完善。任务监控模块引入了应用双活机制、针对浏览器(Chrome和Firefox)进行了适配和优化工作、集成日志记录模块、完善初始化阶段定时任务的调度算法。
-
-### SAFE工程
-
-* 项目描述：
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目无前端,后端使用Spring<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务模块主要涉及到: 接收报文模块、报文打包模块、内外网互传模块、数据校验模块
-
-* 责任描述:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接收报文,将商务部传过来的数据进行打包,传到内网进行分析,并对数据进行验证,错误数据单独打包并返回给商务部,重新发送请求。
-
-
-
-### 报告系统(血液病报告系统、实体瘤报告系统)
-
-* 项目描述：
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目主要是前后端分离项目,前端使用的vue(quasar UI组件库),后端采用的Springcloud这种分布式技术。项目中的数据字典这种偶尔会更新的模块都做了Redis缓存处理。项目中的报告数据使用MongoDB存储进行灵活的数据模型存储。<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务模块主要涉及到: 权限管理模块、数据知识库模块、报告出具模块(报告数据导入、报告初审、报告终审、报告出具)、报告基础配置模块、报告预览模块、报告模板配置模块
-
-* 责任描述:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在项目中,参与需求分析与业务评审,并负责撰写详尽的需求文档以及对数据字典进行优化,通过引入Redis缓存机制提高了查询效率。主要工作集中在开发和维护多个关键模块,包括数据知识库、报告基础配置、报告模板配置以及基于MongoDB的报告出具模块。通过各模块间的紧密联调,确保了数据流的顺畅。
-
-### 可视化项目
-
-* 项目描述：
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目主要是前后端分离项目,前端使用的Echarts,后端采用的Spring Boot。<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务模块主要涉及到: 权限管理模块、报告数据统计模块(月度样本统计、检查项目分布统计、组织中肿瘤细胞含量占比、总体基因突变情况、癌肿分布)、筛选统计数据下载模块、地区分布统计模块
-
-* 责任描述:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;参与需求分析,以及总体设计和详细设计及数据库的设计,主要负责报告数据统计模块(MySQL视图统计)、筛选统计数据下载模块(poi)以及bug优化
-
-### EDC系统
-
-* 项目描述：
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目主要是前后端分离项目,前端使用的vue(Element Plus UI组件库),后端采用的Spring Boot。<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务模块主要涉及到: 权限管理模块、自定义项目添加模块、质疑添加及审核模块、随访提醒模块、医院及医生分配模块
-
-* 责任描述:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我在该项目中主要负责担任页面的设计和后台部分代码编写,主要负责的模块 自定义项目添加模块(自定义了项目、表单、字段、下拉框、日期选择框 采用EAV模型)、质疑添加及审核模块、随访提醒模块(调用邮箱、企业微信接口进行消息推送)、医院及医生分配模块
-
-## 教育经历
-
-* 大连工业大学（2017-09-02——2021-06-25）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计算机科学与技术&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本科
-
-## 自我评价
-
-* 热爱编程,喜欢思考问题,能够查阅各种开发技术的中英文手册,具有独立解决问题的能力；有良好的开发习惯和设计思路。
-* 能够接受集体加班和长期出差
-* 性格沉稳,待人友好；诚实守信,讲原则,不推卸责任。
+                <div class="project-item">
+                    <div class="project-header">
+                        <span class="project-title">医疗报告系统（血液病报告 & 实体瘤报告）</span>
+                        <span class="project-role">核心开发</span>
+                    </div>
+                    <div class="project-tech">技术栈: Spring Cloud + Vue3 + Quasar + MongoDB + Redis + MySQL</div>
+                    <div class="project-content">
+                        <strong>项目描述:</strong> 基于微服务架构的医疗报告全流程管理系统，覆盖报告数据导入、初审、终审、出具等完整业务流程。系统采用MongoDB存储灵活的报告数据模型，通过Redis缓存优化数据字典查询性能，支持权限管理、知识库管理、报告模板配置等功能。
+                    </div>
+                    <div class="project-content">
+                        <strong>核心职责:</strong>
+                        <ul>
+                            <li>参与需求分析与技术评审，编写详细的需求文档和技术方案设计</li>
+                            <li>优化数据字典模块，引入 Redis 缓存机制</li>
+                            <li>独立负责数据知识库、报告基础配置、报告模板配置等核心模块的开发与维护</li>
+                            <li>基于 MongoDB 实现报告出具模块，支持动态字段配置和灵活的数据结构</li>
+                            <li>协调前后端联调与模块集成，确保报告数据流转的完整性和准确性</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-header">
+                        <span class="project-title">医疗数据可视化分析平台</span>
+                        <span class="project-role">核心开发</span>
+                    </div>
+                    <div class="project-tech">技术栈: Spring Boot + Vue3 + Echarts + MySQL + Apache POI</div>
+                    <div class="project-content">
+                        <strong>项目描述:</strong> 医疗大数据统计分析与可视化展示平台，提供月度样本统计、检查项目分布、组织肿瘤细胞含量占比、基因突变情况、癌肿分布等多维度数据分析，支持权限管理、数据筛选与 Excel 导出功能。
+                    </div>
+                    <div class="project-content">
+                        <strong>核心职责:</strong>
+                        <ul>
+                            <li>参与系统总体设计、详细设计及数据库结构设计，制定数据统计方案</li>
+                            <li>开发报告数据统计模块，通过 MySQL 视图优化复杂统计查询，提升查询效率</li>
+                            <li>实现数据筛选与导出功能，使用 Apache POI 生成 Excel 报表，支持多维度数据下载</li>
+                            <li>负责地区分布统计模块开发，结合 Echarts 实现可视化图表展示</li>
+                            <li>进行系统性能优化与 bug 修复，提升用户体验和系统稳定性</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-header">
+                        <span class="project-title">EDC 临床数据采集系统</span>
+                        <span class="project-role">核心开发</span>
+                    </div>
+                    <div class="project-tech">技术栈: Spring Boot + Vue3 + Element Plus + MySQL</div>
+                    <div class="project-content">
+                        <strong>项目描述:</strong> 电子数据采集（EDC）系统，为临床研究提供数据采集与管理功能。系统支持自定义项目与表单配置、数据质疑管理、随访提醒、医院及医生资源分配等功能，集成企业微信和邮件推送服务。
+                    </div>
+                    <div class="project-content">
+                        <strong>核心职责:</strong>
+                        <ul>
+                            <li>负责前端页面设计与后端核心业务逻辑开发，实现前后端完整对接</li>
+                            <li>采用EAV（实体-属性-值）模型设计自定义表单系统，支持项目、表单、字段、下拉框、日期选择等动态配置</li>
+                            <li>开发数据质疑添加与审核流程模块，保障临床数据的准确性和可追溯性</li>
+                            <li>实现随访提醒功能，调用企业微信和邮箱接口实现自动化消息推送，提升随访效率</li>
+                            <li>开发医院及医生分配管理模块，优化资源配置流程</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 教育背景 -->
+            <div class="section">
+                <h2 class="section-title">教育背景</h2>
+                <div class="education-item">
+                    <div>
+                        <span class="university">大连工业大学</span>
+                        <span style="color: #666; margin-left: 15px;">计算机科学与技术 · 本科</span>
+                    </div>
+                    <span class="duration">2017年9月 - 2021年6月</span>
+                </div>
+            </div>
+            
+            <!-- 自我评价 -->
+            <div class="section">
+                <h2 class="section-title">个人优势</h2>
+                <ul class="evaluation-list">
+                    <li><strong>3 年+ Java 开发经验</strong>，熟悉 Spring Boot、Spring Cloud 微服务架构设计与开发</li>
+                    <li>具备<strong>医疗行业项目经验</strong>，熟悉医疗信息化系统业务流程与数据安全规范</li>
+                    <li>拥有<strong>系统优化与重构经验</strong>，能够独立分析问题并提出技术解决方案</li>
+                    <li>具备良好的<strong>代码规范意识</strong>，注重系统性能优化与代码可维护性</li>
+                    <li>能够独立查阅中英文技术文档，具备<strong>快速学习和问题解决能力</strong></li>
+                    <li><strong>责任心强</strong>，适应团队协作，能够接受项目需要的加班和出差安排</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
